@@ -1,10 +1,20 @@
 
+import React from 'react';
+import { setUpNotifications } from 'reapop'
+import Notification from './components/Notification';
+
+setUpNotifications({
+  defaultProps: {
+    position: 'top-right',
+    dismissible: true
+  }
+})
+
 function App() {
   return (
-
-    <div class="grid h-screen place-items-center">Welcome and thanks for cloning the starter app!.</div>
-
-  );
+    <div>
+      <Notification />
+    </div>
+  )
 }
-
 export default App;
